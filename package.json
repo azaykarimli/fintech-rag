@@ -1,0 +1,26 @@
+{
+  "name": "fintech-rag",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Minimal production-shaped RAG service for a fintech context: ingestion, permission-filtered hybrid retrieval, guardrails, evals.",
+  "type": "module",
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "ingest": "tsx src/cli.ts ingest",
+    "ask": "tsx src/cli.ts ask",
+    "eval": "tsx src/cli.ts eval",
+    "serve": "tsx src/server.ts"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "openai": "^4.67.0",
+    "pg": "^8.13.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^22.7.0",
+    "@types/pg": "^8.11.10",
+    "tsx": "^4.19.1",
+    "typescript": "^5.6.2"
+  }
+}
